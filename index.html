@@ -204,7 +204,48 @@
 .vibrate:active {
     animation: soft-vibrate 0.25s ease-in-out;
 }
+    /* 🎯 Links animados */
+.link-animado {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.9);
+  color: #1f5fa3;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 8px;
+  box-shadow: 0 6px 18px rgba(31,95,163,0.25);
+  animation: pulseGlow 2.5s infinite;
+  transition: transform 0.25s ease;
+}
 
+/* 👆 Al tocar */
+.link-animado:active {
+  transform: scale(0.95);
+}
+
+/* ❄️ Pulso suave */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(79,172,254,0.4);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 18px rgba(79,172,254,0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(79,172,254,0.4);
+  }
+}
+
+/* 📍 Iconos */
+.link-animado img {
+  width: 18px;
+}
 </style>
 </head>
 <body>
@@ -227,7 +268,7 @@
 
     <a href="https://www.instagram.com/lagranjitareservanatural/" 
        target="_blank" 
-       class="instagram-link vibrate">
+       class="link-animado vibrar"
 
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
              alt="Instagram"
@@ -238,7 +279,7 @@
 
     <a href="https://maps.google.com/?q=La+Granjita+Reserva+Natural+Ibagué" 
        target="_blank" 
-       class="maps-link vibrate">
+       class="link-animado vibrar"
 
         📍 Ver ubicación en Google Maps
     </a>
@@ -322,6 +363,7 @@ document.addEventListener("click", function iniciarMusica() {
 
 </body>
 </html>
+
 
 
 
