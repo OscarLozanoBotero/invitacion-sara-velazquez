@@ -273,8 +273,8 @@ Calle 31 sur, variante #N 7-90, Ibagué, Tolima
         </div>
     </div>
     <!-- 🎵 Música Frozen - Libre Soy -->
-     <audio audio autoplay loop">
-            <source src="libre_soy.mp3" type="audio/mpeg">
+     <audio id="music" audio autoplay loop">
+            <source src="frozen.mp3" type="audio/mpeg">
      </audio>
 
 </div>
@@ -311,10 +311,18 @@ Calle 31 sur, variante #N 7-90, Ibagué, Tolima
         snow.style.fontSize = (Math.random() * 10 + 10) + "px";
         document.body.appendChild(snow);
     }
+
+document.addEventListener("click", function iniciarMusica() {
+  const music = document.getElementById("music");
+  music.play();
+  document.removeEventListener("click", iniciarMusica);
+});
+
 </script>
 
 </body>
 </html>
+
 
 
 
