@@ -140,6 +140,60 @@
             transform: translateY(110vh);
         }
     }
+
+    .place-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #c13584;
+}
+
+.maps-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: #1f5fa3;
+    font-weight: 500;
+}
+
+.instagram-link:hover,
+.maps-link:hover {
+    text-decoration: underline;
+}
+
+.ig-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.address {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-top: 6px;
+}
+
+/* 💙 Vibración suave */
+@keyframes soft-vibrate {
+    0% { transform: translate(0); }
+    25% { transform: translate(1px, 0); }
+    50% { transform: translate(-1px, 0); }
+    75% { transform: translate(1px, 0); }
+    100% { transform: translate(0); }
+}
+
+.vibrate:active {
+    animation: soft-vibrate 0.25s ease-in-out;
+}
+
 </style>
 </head>
 <body>
@@ -158,19 +212,28 @@
             ⏰ <strong>Hora:</strong> 3:00 p.m.<br>
             📍 <strong>Lugar:</strong><br>
 
-<a href="https://www.instagram.com/lagranjitareservanatural/" 
-   target="_blank" 
-   class="instagram-link">
+<div class="place-links">
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
-         alt="Instagram"
-         class="ig-icon"
-         style="width:22px; vertical-align:middle; margin-right:8px;">
+    <a href="https://www.instagram.com/lagranjitareservanatural/" 
+       target="_blank" 
+       class="instagram-link vibrate">
 
-    La Granjita Reserva Natural
-</a>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+             alt="Instagram"
+             class="ig-icon">
 
-<br>
+        La Granjita Reserva Natural
+    </a>
+
+    <a href="https://maps.google.com/?q=La+Granjita+Reserva+Natural+Ibagué" 
+       target="_blank" 
+       class="maps-link vibrate">
+
+        📍 Ver ubicación en Google Maps
+    </a>
+
+</div>
+
 <span class="address">
 Km 3 vía Armenia, variante Ibagué, 300 metros antes del motel Casa de Campo, Ibagué, Tolima
 </span>
@@ -198,6 +261,17 @@ Km 3 vía Armenia, variante Ibagué, 300 metros antes del motel Casa de Campo, I
             ¡Te esperamos! 💙
         </div>
     </div>
+    <!-- 🎵 Música Frozen - Libre Soy -->
+<div style="display:none;">
+    <iframe 
+        width="0" 
+        height="0"
+        src="https://www.youtube.com/embed/1XqIWr_WqM8?autoplay=1&loop=1&playlist=1XqIWr_WqM8"
+        frameborder="0"
+        allow="autoplay">
+    </iframe>
+</div>
+
 </div>
 
 <script>
@@ -236,6 +310,7 @@ Km 3 vía Armenia, variante Ibagué, 300 metros antes del motel Casa de Campo, I
 
 </body>
 </html>
+
 
 
 
