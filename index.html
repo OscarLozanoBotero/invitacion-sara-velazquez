@@ -192,18 +192,6 @@
     margin-top: 6px;
 }
 
-/* 💙 Vibración suave */
-@keyframes soft-vibrate {
-    0% { transform: translate(0); }
-    25% { transform: translate(1px, 0); }
-    50% { transform: translate(-1px, 0); }
-    75% { transform: translate(1px, 0); }
-    100% { transform: translate(0); }
-}
-
-.vibrate:active {
-    animation: soft-vibrate 0.25s ease-in-out;
-}
     /* 🎯 Links animados */
 .link-animado {
   display: inline-flex;
@@ -268,7 +256,7 @@
 
     <a href="https://www.instagram.com/lagranjitareservanatural/" 
        target="_blank" 
-       class="link-animado vibrar"
+       class="link-animado vibrar">
 
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
              alt="Instagram"
@@ -279,7 +267,7 @@
 
     <a href="https://maps.google.com/?q=La+Granjita+Reserva+Natural+Ibagué" 
        target="_blank" 
-       class="link-animado vibrar"
+       class="link-animado vibrar">
 
         📍 Ver ubicación en Google Maps
     </a>
@@ -363,6 +351,7 @@ document.addEventListener("click", function iniciarMusica() {
 
 </body>
 </html>
+
 
 
 
